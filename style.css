@@ -1,0 +1,242 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-image:url('https://analyticsindiamag.com/wp-content/uploads/2019/05/apps.55787.9007199266246365.687a10a8-4c4a-4a47-8ec5-a95f70d8852d.jpg');
+    color: #fff;
+    line-height: 1.5;
+    opacity: 1;
+     filter:brightness(150%);
+  }
+  
+  /* Header styles */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+  }
+  
+  nav {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  
+  .logo {
+    color: #95030b;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Button styles */
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-red {
+    background-color: #e50914;
+    color: #fff;
+  }
+  
+  .btn-red:hover {
+    background-color: #f40612;
+  }
+  
+  .btn-full {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: url("bg.png") center/cover no-repeat;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .form-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 90px auto 0;
+  }
+  
+  .auth-form {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 3rem;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .auth-form h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color:white;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    background-color: black;
+  }
+  
+  .remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: beige;
+    font-size: 0.9rem;
+  }
+  
+  .help-link {
+    color: beige;
+    text-decoration: none;
+  }
+  
+  .help-link:hover {
+    text-decoration: underline;
+  }
+  
+  .form-footer {
+    margin-top: 3rem;
+    color: #737373;
+  }
+  
+  .form-footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .form-footer .small {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+  }
+  
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem 0;
+    margin-top: 100px;
+    position: relative;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer-column a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    color: #737373;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 768px) {
+    .auth-form {
+      padding: 2rem;
+    }
+  
+    .logo {
+      font-size: 1.6rem;
+
+    }
+  
+    nav {
+      padding: 1rem;
+    }
+  
+    .footer-links {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .auth-form {
+      padding: 1.5rem;
+    }
+  
+    .form-container {
+      margin-top: 50px;
+    }
+  
+    .footer-links {
+      grid-template-columns: 1fr;
+    }
+  }
